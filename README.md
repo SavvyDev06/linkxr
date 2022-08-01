@@ -1,4 +1,6 @@
-# LinkXR - Landing Page
+![LinkXR Splash Logo](https://i.ibb.co/4d8229w/Link-XR-Logo-Compressed.png)
+
+# Welcome to LinkXR.
 
 The official repository for LinkXR, the site designed to conveniently link all your VR, AR and Mixed Reality social accounts in one place.
 https://linkxr.one
