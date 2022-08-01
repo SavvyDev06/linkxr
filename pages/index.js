@@ -69,7 +69,7 @@ export default function Home() {
             transition={{ ease: [0.42, 0, 0, 1.08], duration: 1.5, delay: 0.2 }}
           >
             <Image
-              src="/logo.png"
+              src="/Logo.png"
               alt="LinkXR Logo"
               width={2600}
               height={700}
