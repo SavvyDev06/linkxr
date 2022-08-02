@@ -84,7 +84,7 @@ export default function Home() {
               One Account, all of VR
             </Heading>
             <Heading fontStyle="italic" textAlign="right" opacity={0.75}>
-              XR
+              AR
             </Heading>
             <Heading mb={6} fontStyle="italic" textAlign="right" opacity={0.5}>
               MR
