@@ -8,8 +8,11 @@ import { Button, Flex, Heading } from "@chakra-ui/react";
 // Import framer motion
 import { motion } from "framer-motion";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div
       style={{
@@ -90,12 +93,61 @@ export default function Home() {
               MR
             </Heading>
           </motion.div>
+
+          <motion.div
+            initial={{
+              y: 100,
+              x: -50,
+              opacity: 0,
+              rotateX: "-360deg",
+              rotateY: "-20deg",
+            }}
+            animate={{
+              y: 0,
+              x: 0,
+              opacity: 1,
+              rotateX: "0deg",
+              rotateY: "0deg",
+            }}
+            transition={{ ease: [0.42, 0, 0, 1.08], duration: 2, delay: 1.0 }}
+          >
+            <Heading fontSize={"6xl"} my={10}>
+              🚀 Launching July 2023
+            </Heading>
+          </motion.div>
+
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ ease: [0.42, 0, 0, 1.08], duration: 2, delay: 1.2 }}
+            transition={{ ease: [0.42, 0, 0, 1.08], duration: 2, delay: 2.0 }}
           >
-            <Button disabled={true}>Currently in Closed Beta</Button>
+            <Button
+              p={7}
+              width="100%"
+              height="50px"
+              fontWeight={"black"}
+              fontStyle="italic"
+              fontSize={"3xl"}
+              mb="10px"
+              colorScheme={"purple"}
+              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              color={"#ffffff"}
+              letterSpacing="normal"
+              transitionProperty="all"
+              transitionTimingFunction="ease-out"
+              transitionDuration="0.5s"
+              _hover={{
+                letterSpacing: "widest",
+                transitionProperty: "all",
+                transitionTimingFunction: "ease-out",
+                transitionDuration: "0.5s",
+              }}
+              onClick={() => {
+                router.push("https://tally.so/r/wvM5Bv");
+              }}
+            >
+              APPLY FOR EARLY ACCESS
+            </Button>
           </motion.div>
         </Flex>
       </Flex>

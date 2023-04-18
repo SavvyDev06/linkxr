@@ -11,7 +11,7 @@ const theme = extendTheme({
   config,
   fonts: {
     heading: `'Exo Black', sans-serif`,
-    body: `'Exo Regular', sans-serif`,
+    body: `'Exo ExtraBold', sans-serif`,
   },
   styles: {
     global: (props) => ({

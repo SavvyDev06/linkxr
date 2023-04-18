@@ -20,19 +20,23 @@ export default function Login() {
           variant="filled"
           mb={3}
           type="email"
+          disabled="true"
         />
         <Input
           placeholder="**********"
           variant="filled"
           mb={6}
           type="password"
+          disabled="true"
         />
-        <Button mb={6} colorScheme="teal">
+        <Button mb={6} colorScheme="teal" disabled="true">
           Log in
         </Button>
-        <Button onClick={toggleColorMode}>Toggle Color Mode</Button>
+        <Button onClick={toggleColorMode} disabled="true">
+          Toggle Color Mode
+        </Button>
         <Text fontStyle="italic" mt={4}>
-          Work-in-progress.
+          Disabled. Google & Facebook login coming on site launch.
         </Text>
       </Flex>
     </Flex>
