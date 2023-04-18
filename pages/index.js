@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div
       style={{
-        backgroundImage: `url(https://i.ibb.co/JmzC5W9/Gradient-BG.jpg)`,
+        backgroundImage: `url(https://cdn.linkxr.one/official_resources/GradientBG.jpg)`,
       }}
     >
       <Head>
