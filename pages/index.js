@@ -3,15 +3,29 @@
 // import styles from "../styles/Home.module.css";
 import Image from "next/image";
 
-import { Button, Flex, Heading } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Heading,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
+  useDisclosure,
+} from "@chakra-ui/react";
 
 // Import framer motion
 import { motion } from "framer-motion";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 export default function Home() {
   const router = useRouter();
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <div
@@ -57,6 +71,41 @@ export default function Home() {
           content="https://i.ibb.co/4d8229w/Link-XR-Logo-Compressed.png"
         />
       </Head>
+
+      <Modal
+        isOpen={isOpen}
+        onClose={() => {
+          onClose();
+          router.reload();
+        }}
+      >
+        <ModalOverlay />
+        <ModalContent borderRadius={20} bg="black">
+          <ModalHeader bg="black" fontFamily={"Exo"} borderRadius={20}>
+            Apply for early access
+          </ModalHeader>
+          <ModalCloseButton />
+          <ModalBody bg="black" borderRadius={20}>
+            <iframe
+              data-tally-src="https://tally.so/embed/wvM5Bv?alignLeft=1&hideTitle=1&dynamicHeight=1"
+              loading="lazy"
+              width="100%"
+              height="688"
+              border="none"
+              margin="0px 0px 0px 0px"
+              title="LinkXR  |  Get Early Access"
+            ></iframe>
+
+            <Script
+              id="tally-js"
+              src="https://tally.so/widgets/embed.js"
+              onReady={() => {
+                Tally.loadEmbeds();
+              }}
+            />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
 
       <Flex height="100vh" alignItems="center" justifyContent="center">
         <Flex
@@ -143,7 +192,8 @@ export default function Home() {
                 transitionDuration: "0.5s",
               }}
               onClick={() => {
-                router.push("https://tally.so/r/wvM5Bv");
+                onOpen();
+                // router.push("https://tally.so/r/wvM5Bv");
               }}
             >
               APPLY FOR EARLY ACCESS
