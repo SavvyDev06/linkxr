@@ -111,7 +111,7 @@ export default function Home() {
             }}
             transition={{ ease: [0.42, 0, 0, 1.08], duration: 2, delay: 1.0 }}
           >
-            <Heading fontSize={"6xl"} my={10}>
+            <Heading fontSize={"3vh"} my={10}>
               🚀 Launching July 2023
             </Heading>
           </motion.div>
@@ -122,12 +122,12 @@ export default function Home() {
             transition={{ ease: [0.42, 0, 0, 1.08], duration: 2, delay: 2.0 }}
           >
             <Button
-              p={7}
+              p={4}
               width="100%"
               height="50px"
               fontWeight={"black"}
               fontStyle="italic"
-              fontSize={"3xl"}
+              fontSize={"lg"}
               mb="10px"
               colorScheme={"purple"}
               bgGradient="linear(to-l, #7928CA, #FF0080)"
